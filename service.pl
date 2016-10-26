@@ -1,5 +1,5 @@
 use Mojolicious::Lite;
-get '/' => { text => 'Hello World' };
+get '/' =>  { json => {response => { api_status=>true,  reponse_time=> time} }};
 
 get '/user_details' => { json => {first_name => "Arun", last_name => "Kumar", address => "xx street", city => "chenai", now => time}};
 get '/echo' => { text => q{
